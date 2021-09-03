@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
+  tweets = [];
+  segment = 'home';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-
+    this.http.get('https://devdactic.fra1.digitaloceanspaces.com/twitter-ui/tweets.json').subscribe((data: any) => {
+      console.log('tweets: ', data.tweets);
+      this.tweets = data.tweets;
+    });
   }
 
 }

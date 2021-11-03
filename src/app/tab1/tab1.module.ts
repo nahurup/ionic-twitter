@@ -8,7 +8,6 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { SharedComponentsModule } from '../components/shared-components.module';
 import { SharedDirectivesModule } from '../directives/shared-directives.module';
-import { TweetComponent } from '../components/tweet/tweet.component.ts';
 
 @NgModule({
   imports: [
@@ -18,8 +17,7 @@ import { TweetComponent } from '../components/tweet/tweet.component.ts';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
     SharedComponentsModule,
-    SharedDirectivesModule,
-    TweetComponent
+    SharedDirectivesModule
   ],
   declarations: [Tab1Page]
 })
